@@ -1,0 +1,54 @@
+.header-call {
+  display: flex;
+  align-items: center;
+
+  // .header-call__btn
+  &__btn {
+    margin-right: 15px;
+  }
+
+  // .header-call__text
+  &__text {
+    margin-right: 25px;
+  }
+
+  // .header-call__phone
+  &__phone {
+    margin-bottom: 2px;
+    color: inherit;
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration: none;
+
+    &:hover {
+      color: $cl-red;
+    }
+
+    &:active {
+      color: inherit;
+      opacity: 0.6;
+    }
+  }
+
+  // .header-call__schedule
+  &__schedule {
+    margin: 0;
+  }
+
+  // .header-call__order-link
+  &__order-link {
+    width: 65px;
+    color: $cl-red;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      color: lighten($cl-red, 20%);
+    }
+
+    &:active {
+      color: $cl-red;
+      opacity: 0.6;
+    }
+  }
+}

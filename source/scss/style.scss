@@ -9,10 +9,15 @@
 @import "layout";
 
 // UI-Elements
-// @import "elements/buttons";
+@import "elements/buttons";
 
 // Components
-// @import "components/kek"
+@import "components/cart";
+@import "components/header-call";
+@import "components/nav-main";
+@import "components/region-choise";
+@import "components/search-form";
+
 
 // Sections
-// @import "sections/page-header";
+@import "sections/page-header";

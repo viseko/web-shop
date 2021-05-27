@@ -1,0 +1,75 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  color: #585858;
+  background-color: $cl-white;
+
+  // .page-header__main
+  &__main {
+    padding: 6px 0;
+  }
+
+  // .page-header__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  // .page-header__call
+  &__call {
+    margin-right: 45px;
+  }
+
+  // .page-header__region
+  &__region {
+    // пока не требуется
+  }
+
+  // .page-header__search
+  &__search {
+    margin-left: auto;
+    margin-right: 25px;
+  }
+
+  // .page-header__menu-btn
+  &__menu-btn {
+    display: none;
+  }
+
+  // .page-header__cart
+  &__cart {
+    // Пока не требуется
+  }
+
+  // .page-header__banners
+  &__banners {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .page-header__logo
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 243px;
+    height: 130px;
+    flex-shrink: 0;
+    color: $cl-white;
+    background-color: $cl-red;
+  }
+
+  // .page-header__banner
+  &__banner {
+    width: 732px;
+    height: 130px;
+    flex-shrink: 0;
+    background-color: #afafaf;
+  }
+
+  // .page-header__nav
+  &__nav {
+    // Пока не требуется
+  }
+}
+
