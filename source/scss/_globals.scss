@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.noscript {
+  margin: 0;
+  padding: 15px;
+
+  color: #fff;
+  text-align: center;
+
+  background-color: #f00;
+
+  &__link {
+    color: inherit;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+
+  color: $g-text-color;
+  font-family: $g-font;
+  font-size: $g-font-size;
+  line-height: $g-line-height;
+
+  background-color: $g-bg-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

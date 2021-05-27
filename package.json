@@ -1,0 +1,38 @@
+{
+  "name": "web-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "npm run stylelint",
+    "build": "gulp build",
+    "dev": "gulp",
+    "stylelint": "stylelint 'source/**/*.scss'",
+    "stylelint:fix": "stylelint 'source/**/*.scss' --fix"
+  },
+  "author": "viseko23",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-fonter": "^0.3.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svg2png": "^2.0.2",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-webp": "^4.0.0",
+    "node.normalize.scss": "^3.0.3",
+    "stylelint": "^13.12.0",
+    "stylelint-config-htmlacademy": "^0.1.4"
+  }
+}

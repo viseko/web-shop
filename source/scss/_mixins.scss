@@ -1,0 +1,139 @@
+// Common mixins
+
+@mixin font($font-name, $file-name, $weight, $style) {
+  @font-face {
+    font-family: $font-name;
+    font-display: swap;
+    src: url("../fonts/#{$file-name}.woff2") format("woff2"),
+      url("../fonts/#{$file-name}.woff") format("woff");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin circle($size) {
+  @include size($size);
+  border-radius: 50%;
+}
+
+// SVG-decorations
+// 1. Triangle corner below the block
+@mixin corner($height, $color) {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -$height;
+    left: 0;
+
+    width: 100%;
+    height: $height;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 320 34'%3E%3Cpath d='M0 0l161.429 34L320 0z' fill='%23#{$color}' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+    background-size: 100% $height;
+    background-repeat: no-repeat;
+  }
+}
+
+// 2. Reverse-triange corner above the block
+@mixin corner-reverse($height, $color) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -$height;
+
+    width: 100%;
+    height: $height;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 320 34'%3E%3Cpath d='M0 0v34h160zm320 0v34H160z' fill='%23#{$color}' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 100% $height;
+  }
+}
+
+// 3. Diagonal border above the block
+@mixin diagonal($height, $color) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -$height;
+    left: 0;
+
+    width: 100%;
+    height: $height;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 10 10'%3E%3Cpath fill='none' d='M-1-1h12v12H-1z'/%3E%3Cg%3E%3Cpath d='M0 10h10V0L0 10z' fill='%23#{$color}'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 100%;
+  }
+}
+
+// Container for retina properties
+@mixin retina {
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+// Background settings for webp and retina
+@mixin webp-retina-bg($url) {
+  $trim-url: str-slice($url, 0, -4);
+  $format: str-slice($url, -3);
+
+  .no-webp & {
+    background-image: url("#{$url}");
+
+    @include retina {
+      background-image: url("#{$trim-url}@x2.#{$format}");
+    }
+  }
+
+  .webp & {
+    background-image: url("#{$trim-url}.webp");
+
+    @include retina {
+      background-image: url("#{$trim-url}@x2.webp");
+    }
+  }
+}
+
+@mixin webp-bg($url) {
+  $trim-url: str-slice($url, 0, -5);
+
+  .no-webp & {
+    background-image: url("#{$url}");
+  }
+
+  .webp & {
+    background-image: url("#{$trim-url}.webp");
+  }
+}
+
+@mixin webp-bg-clean {
+  .no-webp & {
+    background-image: none;
+  }
+
+  .webp & {
+    background-image: none;
+  }
+}
