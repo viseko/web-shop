@@ -52,3 +52,19 @@
     }
   }
 }
+
+@media (max-width: $br1) {
+  .header-call__text {
+    margin-right: 0;
+  }
+
+  .header-call__order-link {
+    display: none;
+  }
+}
+
+@media (max-width: $br3) {
+  .header-call__text {
+    display: none;
+  }
+}
