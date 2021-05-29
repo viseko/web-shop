@@ -17,6 +17,7 @@
 
   // .sidebar__banner
   &__banner {
+    // Пока не делаем
   }
 }
 
@@ -27,6 +28,8 @@
 @media (max-width: $br2) {
   .sidebar {
     position: absolute;
+    top: 0;
+    left: 0;
     margin-right: 0;
     width: 100%;
   }
