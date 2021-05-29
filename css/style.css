@@ -892,8 +892,8 @@ h6 {
   width: 31px;
   height: 31px;
   border: 0;
+  border-left: 1px solid #e2e3e4;
   background: none;
-  opacity: 0.3;
 }
 
 .nav-catalog__btn-expand:hover {
