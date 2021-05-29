@@ -10,13 +10,15 @@
 
 // UI-Elements
 @import "elements/buttons";
+@import "elements/section";
 
 // Components
+@import "components/nav-main";
 @import "components/cart";
 @import "components/header-call";
-@import "components/nav-main";
 @import "components/region-choise";
 @import "components/search-form";
+@import "components/nav-catalog";
 
 
 // Sections

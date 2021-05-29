@@ -7,8 +7,8 @@
   <!-- noscript notification -->
   <noscript>
     <p class="noscript">
-      JavaScript is disabled in your browser. Some site functionality may not work as intended.<br>
-      <a class="noscript__link" href="https://enable-javascript.com/">How to enable JavaScript?</a>
+      Внимание! В вашем браузере отключен JavaScript. Некоторый функционал на сайте может работать некорректно.<br>
+      <a class="noscript__link" href="https://enable-javascript.com/">Как включить JavaScript?</a>
     </p>
   </noscript>
 
@@ -16,10 +16,16 @@
   <div class="page">
     <!-- page-header -->
     @@include("includes/_page-header.html")
-
-    <!-- main-content -->
-  <main>
-
+    <!-- sidebar -->
+    @@include("includes/_sidebar.html")
+  <!-- main sections -->
+  <main class="page-main">
+    @@include("includes/_section-promo.html")
+    @@include("includes/_section-video.html")
+    @@include("includes/_section-catalog.html")
+    @@include("includes/_section-video.html")
+    @@include("includes/_section-news.html")
+    @@include("includes/_section-about.html")
   </main>
 
   <!-- page-footer -->

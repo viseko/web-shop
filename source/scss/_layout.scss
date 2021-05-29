@@ -2,8 +2,32 @@
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .wrapper {
   padding: 0 13px;
+}
+
+.sidebar {
+  width: 245px;
+  margin-right: 5px;
+  background-color: #f1f1f2;
+
+  // .sidebar__banner
+  &__banner {
+  }
+}
+
+.page-main {
+  flex-grow: 1;
+}
+
+@media (max-width: $br2) {
+  .sidebar {
+    position: absolute;
+    margin-right: 0;
+    width: 100%;
+  }
 }

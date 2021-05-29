@@ -1,0 +1,12 @@
+
+.section {
+  padding: 11px 0;
+  background-color: $cl-white;
+
+  &__title {
+    color: $cl-red;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 11px;
+  }
+}

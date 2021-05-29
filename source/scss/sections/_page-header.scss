@@ -1,6 +1,8 @@
 .page-header {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  margin-bottom: 5px;
   color: #585858;
   background-color: $cl-white;
 
@@ -72,7 +74,11 @@
   .page-header {
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;;
+    align-items: center;
+  }
+
+  .page-header__call {
+    margin-right: 35px;
   }
 
   .page-header__banners {
@@ -103,12 +109,12 @@
 }
 
 @media (max-width: $br2) {
-  .page-header__call {
-    margin-right: 5px;
+  .page-header {
+    margin-bottom: 5px;
   }
 
-  .page-header__region {
-    margin-left: auto;
+  .page-header__call {
+    margin-right: 25px;
   }
 
   .page-header__search {
@@ -155,5 +161,12 @@
 
   .page-header__search {
     top: 54px;
+  }
+}
+
+@media (max-width: $br5) {
+  .page-header__search {
+    // Временно:
+    display: none;
   }
 }

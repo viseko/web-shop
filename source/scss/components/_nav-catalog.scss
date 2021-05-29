@@ -1,0 +1,227 @@
+.nav-catalog {
+  // Пока не требуется
+
+  // .nav-catalog__header
+  &__header {
+    border-bottom: 1px solid #cecece;
+  }
+
+  // .nav-catalog__title
+  &__title {
+    display: block;
+    padding: 11px 13px;
+    color: $cl-red;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: #e2e3e4;
+    }
+
+    &:active {
+      color: rgba($cl-red, 0.6);
+    }
+  }
+
+  // .nav-catalog__menu-btn
+  &__menu-btn {
+    display: none;
+  }
+
+  // .nav-catalog__list
+  &__list {
+    // Пока не требуется
+  }
+
+  &__list > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__category-item {
+    position: relative;
+    border-bottom: 1px solid #cecece;
+  }
+
+  // .nav-catalog__link
+
+  &__link {
+    display: block;
+    padding: 8px 0 7px 13px;
+    color: #58585b;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      color: $cl-red;
+      background-color: #e2e3e4;
+    }
+
+    &:active {
+      color: rgba($cl-red, 0.6);
+    }
+  }
+
+  // .nav-catalog__btn-expand
+  &__btn-expand {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 31px;
+    height: 31px;
+    border: 0;
+    border-left: 1px solid #e2e3e4;
+    background: none;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: $cl-red;
+    }
+  }
+
+  &__btn-expand::before,
+  &__btn-expand::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lighten(#58585b, 30%);
+  }
+
+  &__btn-expand::before {
+    width: 8px;
+    height: 2px;
+  }
+
+  &__btn-expand::after {
+    width: 2px;
+    height: 8px;
+    transition: 0.2s height;
+  }
+
+
+  // .nav-catalog__sublist
+  &__sublist {
+    // Временно:
+    display: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 6px;
+    list-style: none;
+  }
+
+  // .nav-catalog__sublink
+  &__sublink {
+    display: block;
+    padding: 3px 29px;
+    color: #585858;
+    text-decoration: none;
+
+    &:hover {
+      color: $cl-red;
+      background-color: #e2e3e4;
+    }
+
+    &:active {
+      color: rgba($cl-red, 0.6);
+    }
+  }
+
+  // .nav-catalog__link--download
+  &__link--download {
+    color: $cl-red;
+  }
+}
+
+// ============== When category item is expanded =================
+.nav-catalog__category-item--open {
+  .nav-catalog__link {
+    color: $cl-red;
+  }
+
+  .nav-catalog__btn-expand {
+    height: 32px;
+    border-bottom: 1px solid #e2e3e4;
+  }
+
+  .nav-catalog__btn-expand::before,
+  .nav-catalog__btn-expand::after {
+    background-color: $cl-red;
+  }
+
+  .nav-catalog__btn-expand::after {
+    height: 2px;
+  }
+
+  .nav-catalog__sublist {
+    display: block;
+  }
+}
+
+@media (max-width: $br2) {
+  .nav-catalog__list {
+    // Временно
+    display: none;
+  }
+
+  .nav-catalog__header {
+    position: absolute;
+    top: 85px;
+    padding-right: 40px;
+    border: 0;
+  }
+
+  .nav-catalog__title {
+    padding: 12px 13px 11px;
+  }
+
+  .nav-catalog__menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 39px;
+    color: $cl-red;
+    border: 0;
+    background: none;
+
+    &:hover {
+      background-color: #e2e3e4;
+    }
+
+    &:active {
+      color: rgba($cl-red, 0.6);
+    }
+  }
+}
+
+@media (max-width: $br4) {
+  .nav-catalog__header {
+    top: 51px;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $br5) {
+  .nav-catalog__header {
+    left: unset;
+    right: 0;
+  }
+}

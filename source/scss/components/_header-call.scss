@@ -64,6 +64,10 @@
 }
 
 @media (max-width: $br3) {
+  .header-call__btn {
+    margin-right: 0;
+  }
+
   .header-call__text {
     display: none;
   }
