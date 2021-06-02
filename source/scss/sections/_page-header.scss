@@ -70,6 +70,10 @@
   }
 }
 
+._menu-show .page-header__cart {
+  margin-left: auto;
+}
+
 @media (max-width: $br1) {
   .page-header {
     flex-direction: row;

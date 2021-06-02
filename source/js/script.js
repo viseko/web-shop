@@ -1,33 +1,23 @@
 (function () {
-  // Глобальные состояния
-  let mainMenuOpen = false;
+  // Helpers:
+  @@include("_adaptive-move.js");
+  @@include("_menu-btn.js");
 
-  // Мобильное меню навигации
-
-  // Мобильное меню каталога
-  document.querySelector(".js-menu-nav").addEventListener("click", function() {
-    if (!mainMenuOpen) {
-      openMobileMenu();
-    } else {
-      closeMobileMenu();
-    }
+  // Navigation mobile menu
+  const menuBtn = setMenuButton({
+    btn: "js-menu-nav",
+    stateBodyClass: "_menu-show",
+    mediaWhenMenuClose: "(max-height: 875px)"
   });
 
-  function openMobileMenu() {
-    document.body.classList.add("_menu-show");
-    mainMenuOpen = true;
-  }
-
-  function closeMobileMenu() {
-    document.body.classList.remove("_menu-show");
-    mainMenuOpen = false;
-  }
-
-  window.addEventListener("resize", function() {
-    if (window.innerWidth > 875 && mainMenuOpen) closeMobileMenu();
+  // Catalog mobile menu
+  const catalogBtn = setMenuButton({
+    btn: "js-menu-catalog",
+    stateBodyClass: "_catalog-show",
+    mediaWhenMenuClose: "(max-height: 875px)"
   });
 
-  // Раскрытие подменю каталога
+  // Catalog submenues
   const catalogExpandBtns = document.querySelectorAll(".nav-catalog__btn-expand");
   for (let i = 0; i < catalogExpandBtns.length; i++) {
     expandBtn = catalogExpandBtns[i];
