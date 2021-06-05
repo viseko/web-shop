@@ -84,7 +84,7 @@
         </button>
       </div>
       <!-- header-search -->
-      <div class="page-header__search search-form">
+      <div class="page-header__search search-form" data-am=".nav-catalog__list / (max-width: 400px)">
         <form action="https://echo.htmlacademy.ru" method="GET">
           <input type="text" name="s-search" id="search" placeholder="Поиск по каталогу" required>
           <button type="submit">
@@ -95,9 +95,12 @@
         </form>
       </div>
       <!-- right-buttons -->
-      <button class="btn-round page-header__menu-btn">
-        <svg width="18" height="12">
+      <button class="btn-round btn-round--menu page-header__menu-btn nav-main__menu-btn js-menu-nav">
+        <svg class="nav-main__menu-icon" width="18" height="12">
           <use xlink:href="img/sprite.svg#menu"></use>
+        </svg>
+        <svg class="nav-main__close-icon" width="18" height="18">
+          <use xlink:href="img/sprite.svg#close"></use>
         </svg>
       </button>
       <div class="page-header__cart cart">
@@ -167,7 +170,7 @@
       <a href="#" class="nav-catalog__title">
         Каталог <span>товаров</span>
       </a>
-      <button class="nav-catalog__menu-btn" title="Развернуть каталог">
+      <button class="nav-catalog__menu-btn js-menu-catalog" title="Развернуть каталог">
         <svg width="18" height="12">
           <use xlink:href="img/sprite.svg#menu"></use>
         </svg>
@@ -384,11 +387,101 @@
 
   <!-- page-footer -->
   <footer class="page-footer">
-
+  <div class="page-footer__main">
+    <nav class="page-footer__nav">
+      <ul class="page-footer__links">
+        <li>
+          <a href="#">Название ссылки</a>
+        </li>
+        <li>
+          <a href="#">Название ссылки</a>
+        </li>
+        <li>
+          <a href="#">Название ссылки</a>
+        </li>
+        <li>
+          <a href="#">Название ссылки</a>
+        </li>
+        <li>
+          <a href="#">Название ссылки</a>
+        </li>
+        <li>
+          <a href="#">Название ссылки</a>
+        </li>
+        <li>
+          <a href="#">Название ссылки</a>
+        </li>
+        <li>
+          <a href="#">Название ссылки</a>
+        </li>
+        <li>
+          <a href="#">Название ссылки</a>
+        </li>
+        <li>
+          <a href="#">Название ссылки</a>
+        </li>
+        <li>
+          <a href="#">Название ссылки</a>
+        </li>
+        <li>
+          <a href="#">Название ссылки</a>
+        </li>
+      </ul>
+      <div class="page-footer__search search-form">
+        <form action="https://echo.htmlacademy.ru" method="GET">
+          <input type="text" name="s-search" id="search" placeholder="Поиск по каталогу" required>
+          <button type="submit">
+            <svg width="17" height="17">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </nav>
+    <div class="page-footer__contacts">
+      <div class="page-footer__contact-list page-footer__contact-list--phone">
+        <ul>
+          <li>
+            г. Урюпинск: тел. <a href="tel:6666666666">(666) 666-66-66</a>, <a href="tel:7777777777">(777) 777-77-77</a>
+          </li>
+          <li>
+            г. Бобруйск: тел (111) 111-11-11, (222) 222-22-22, (333) 333-33-33
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__contact-list page-footer__contact-list--address">
+        <ul>
+          <li>
+            666666, г. Урюпинск, ул. Лесопарковая, д. 1, строение 1, оф. 228<br>
+            Режим работы: с 9:00 до 18:00, выходной: суббота, воскресенье
+          </li>
+          <li>
+            666666, г. Бобруйск, ул. Лесопарковая, д. 1, строение 1, оф. 228<br>
+            Режим работы: с 9:00 до 18:00, выходной: суббота, воскресенье
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__contact-list page-footer__contact-list--mail">
+        <ul>
+          <li>
+            <a href="mailto:mail1@mail.ru">mail1@mail.ru</a>
+          </li>
+          <li>
+            <a href="mailto:mail2@mail.ru">mail2@mail.ru</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer__copyright">
+    &copy; 1984-2021, ООО "Крутая Компания". Все права защищены и охраняются драконом.
+  </div>
 </footer>
 
   </div>
 
+  <!-- modal -->
+  <div class="modal-background"></div>
   <!--scripts -->
   <script src="js/script.min.js"></script>
 
