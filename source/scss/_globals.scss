@@ -41,6 +41,11 @@ body {
   line-height: $g-line-height;
 
   background-color: $g-bg-color;
+
+  &._menu-show,
+  &._catalog-show {
+    overflow: hidden;
+  }
 }
 
 img {

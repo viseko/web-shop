@@ -7,14 +7,14 @@
   const menuBtn = setMenuButton({
     btn: "js-menu-nav",
     stateBodyClass: "_menu-show",
-    mediaWhenMenuClose: "(max-height: 875px)"
+    mediaWhenMenuClose: "(max-width: 875px)"
   });
 
   // Catalog mobile menu
   const catalogBtn = setMenuButton({
     btn: "js-menu-catalog",
     stateBodyClass: "_catalog-show",
-    mediaWhenMenuClose: "(max-height: 875px)"
+    mediaWhenMenuClose: "(max-width: 875px)"
   });
 
   // Catalog submenues

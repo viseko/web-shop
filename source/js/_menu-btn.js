@@ -15,7 +15,7 @@ function setMenuButton(options) {
 
   const media = window.matchMedia(mediaWhenMenuClose);
   media.addEventListener("change", function() {
-    if (this.matches && menuOpen) closeMenu();
+    if (!this.matches && menuOpen) closeMenu();
   });
 
   function openMenu() {
