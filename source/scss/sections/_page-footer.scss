@@ -1,0 +1,171 @@
+.page-footer {
+  width: 100%;
+  margin-top: 5px;
+  padding: 25px 13px 0 13px;
+  color: #fff;
+  background-color: #777;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  // .page-footer__main
+  &__main {
+    display: flex;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #fff;
+  }
+
+  // .page-footer__nav
+  &__nav {
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+
+  // .page-footer__links
+  &__links {
+    list-style: none;
+    columns: 2;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    font-size: 11px;
+  }
+
+  &__links li {
+    padding-left: 15px;
+    margin-bottom: 5px;
+
+    @include svg-ico-double-chevron("%23ffffff", 8px);
+    background-position-y: 3px;
+  }
+
+  // .page-footer__search
+  &__search {
+    width: 230px;
+  }
+
+  // .page-footer__contacts
+  &__contacts {
+    margin-right: 20px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  // .page-footer__contact-list
+  &__contact-list {
+    @include reset-list;
+
+    padding-left: 21px;
+    margin-bottom: 10px;
+    background-position-y: 2px;
+  }
+
+  // .page-footer__contact-list--phone
+  &__contact-list--phone {
+    @include svg-ico-phone-classic("%23ffffff", 15px, 20px);
+  }
+
+  // .page-footer__contact-list--address
+  &__contact-list--address {
+    @include svg-ico-home("%23ffffff", 14px, 12px);
+  }
+
+  &__contact-list--address li {
+    margin-bottom: 7px;
+  }
+
+  // .page-footer__contact-list--mail
+  &__contact-list--mail {
+    @include svg-ico-mail("%23ffffff", 15px, 12px);
+  }
+
+  // .page-footer__right-column
+  &__right-column {
+    margin-left: auto;
+  }
+
+  // .page-footer__maps
+  &__maps {
+    display: flex;
+    justify-content: space-between;
+    width: 261px;
+    margin-bottom: 5px;
+  }
+
+  // .page-footer__map
+  &__map {
+    width: 128px;
+    height: 135px;
+    background-color: #c4c4c4;
+  }
+
+  // .page-footer__social-links
+  &__social-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__social-links p {
+    margin: 0;
+    margin-right: 13px;
+  }
+
+  // .page-footer__social-link
+  &__social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    margin-right: 5px;
+  }
+
+  // .page-footer__social-link--vk
+  &__social-link--vk {
+    $bg-c: #6383a8;
+    background-color: $bg-c;
+
+    &:hover {
+      background-color: darken($bg-c, 10%);
+    }
+  }
+
+  // .page-footer__social-link--twitter
+  &__social-link--twitter {
+    $bg-c: #00bbf0;
+    background-color: $bg-c;
+
+    &:hover {
+      background-color: darken($bg-c, 10%);
+    }
+  }
+
+  // .page-footer__social-link--youtube
+  &__social-link--youtube {
+    margin-right: 0;
+    $bg-c: #cc0e1e;
+    background-color: $bg-c;
+
+    &:hover {
+      background-color: darken($bg-c, 10%);
+    }
+  }
+
+  // .page-footer__copyright
+  &__copyright {
+    padding: 15px 0;
+    font-size: 12px;
+    text-align: center;
+  }
+}
