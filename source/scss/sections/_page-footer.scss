@@ -45,7 +45,7 @@
     padding-left: 15px;
     margin-bottom: 5px;
 
-    @include svg-ico-double-chevron("%23ffffff", 8px);
+    @include svg-ico-double-chevron("%23ffffff", 8);
     background-position-y: 3px;
   }
 
@@ -72,12 +72,12 @@
 
   // .page-footer__contact-list--phone
   &__contact-list--phone {
-    @include svg-ico-phone-classic("%23ffffff", 15px, 20px);
+    @include svg-ico-phone-classic("%23ffffff", 15, 20);
   }
 
   // .page-footer__contact-list--address
   &__contact-list--address {
-    @include svg-ico-home("%23ffffff", 14px, 12px);
+    @include svg-ico-home("%23ffffff", 14, 12);
   }
 
   &__contact-list--address li {
@@ -86,7 +86,7 @@
 
   // .page-footer__contact-list--mail
   &__contact-list--mail {
-    @include svg-ico-mail("%23ffffff", 15px, 12px);
+    @include svg-ico-mail("%23ffffff", 15, 12);
   }
 
   // .page-footer__right-column

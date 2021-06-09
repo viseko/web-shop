@@ -22,7 +22,9 @@
 }
 
 .page-main {
+  width: 50%;
   flex-grow: 1;
+  flex-shrink: 1;
 }
 
 @media (max-width: $br2) {
