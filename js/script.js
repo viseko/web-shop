@@ -1,5 +1,13 @@
 (function () {
   // Helpers:
+  // addEventListener for MediaQueryList
+if (!window.matchMedia("screen").addEventListener) {
+  window.matchMedia("screen").__proto__.addEventListener = (function() {
+    const f = arguments[1];
+    this.addListener(f);
+  });
+}
+;
   // ========== Adaptive move ===========
 // How to use:
 // 1. Add "data-am" attribute to HTML-element you need.
@@ -77,7 +85,7 @@ for (query in queries) {
 
   const media = window.matchMedia(mediaWhenMenuClose);
   media.addEventListener("change", function() {
-    if (this.matches && menuOpen) closeMenu();
+    if (!this.matches && menuOpen) closeMenu();
   });
 
   function openMenu() {
@@ -104,14 +112,14 @@ for (query in queries) {
   const menuBtn = setMenuButton({
     btn: "js-menu-nav",
     stateBodyClass: "_menu-show",
-    mediaWhenMenuClose: "(max-height: 875px)"
+    mediaWhenMenuClose: "(max-width: 875px)"
   });
 
   // Catalog mobile menu
   const catalogBtn = setMenuButton({
     btn: "js-menu-catalog",
     stateBodyClass: "_catalog-show",
-    mediaWhenMenuClose: "(max-height: 875px)"
+    mediaWhenMenuClose: "(max-width: 875px)"
   });
 
   // Catalog submenues

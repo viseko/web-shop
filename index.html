@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js no-webp" lang="en">
+<html class="no-js no-webp" lang="ru">
 <head>
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -375,6 +375,47 @@
     <header class="section__header">
       <h2 class="section__title">Новинки</h2>
     </header>
+    <!-- promo-slider -->
+    <div class="promo__slider slider">
+      <!-- slides -->
+      <div class="slider__container">
+        <div class="slider__slide promo__slide">
+          <figure class="promo__image"></figure>
+          <div class="promo__description">
+            <div class="promo__description-top">
+              <h3 class="promo__product-title">X3-666RX</h3>
+              <div class="promo__short-text">
+                Первая в мире штука<br>
+                с большим количеством фич<br>
+                и шумным вентилятором
+              </div>
+            </div>
+            <div class="promo__main-text">
+              Учитывая ключевые сценарии поведения, высокое качество позиционных исследований прекрасно подходит для реализации как самодостаточных, так и внешне зависимых концептуальных решений. Предварительные выводы неутешительны: убеждённость некоторых оппонентов однозначно фиксирует необходимость прогресса профессионального сообщества.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- pagination -->
+      <div class="slider__pagination promo__pagination">
+        <button class="slider__bullet"></button>
+        <button class="slider__bullet slider__bullet--active"></button>
+        <button class="slider__bullet"></button>
+        <button class="slider__bullet"></button>
+        <button class="slider__bullet"></button>
+      </div>
+      <!-- controls -->
+      <button class="slider__controls promo__controls promo__controls--prev">
+        <svg class="nav-main__menu-icon" width="30" height="30">
+          <use xlink:href="img/sprite.svg#arrow-left"></use>
+        </svg>
+      </button>
+      <button class="slider__controls promo__controls promo__controls--next">
+        <svg class="nav-main__menu-icon" width="30" height="30">
+          <use xlink:href="img/sprite.svg#arrow-right"></use>
+        </svg>
+      </button>
+    </div>
   </div>
 </section>
 
@@ -388,6 +429,7 @@
   <!-- page-footer -->
   <footer class="page-footer">
   <div class="page-footer__main">
+    <!-- footer nav -->
     <nav class="page-footer__nav">
       <ul class="page-footer__links">
         <li>
@@ -438,38 +480,61 @@
         </form>
       </div>
     </nav>
+    <!-- contacts -->
     <div class="page-footer__contacts">
-      <div class="page-footer__contact-list page-footer__contact-list--phone">
-        <ul>
-          <li>
-            г. Урюпинск: тел. <a href="tel:6666666666">(666) 666-66-66</a>, <a href="tel:7777777777">(777) 777-77-77</a>
-          </li>
-          <li>
-            г. Бобруйск: тел (111) 111-11-11, (222) 222-22-22, (333) 333-33-33
-          </li>
-        </ul>
+      <ul class="page-footer__contact-list page-footer__contact-list--phone">
+        <li>
+          г. Урюпинск: тел. <a href="tel:6666666666">(666) 666-66-66</a>, <a href="tel:7777777777">(777) 777-77-77</a>
+        </li>
+        <li>
+          г. Бобруйск: тел <a href="tel:2222222222">(222) 222-22-22</a>, <a href="tel:1111111111">(111) 111-11-11</a>
+        </li>
+      </ul>
+      <ul class="page-footer__contact-list page-footer__contact-list--address">
+        <li>
+          666666, г. Урюпинск, ул. Лесопарковая, д. 1, строение 1, оф. 228<br>
+          Режим работы: с 9:00 до 18:00, выходной: суббота, воскресенье
+        </li>
+        <li>
+          666666, г. Бобруйск, ул. Лесопарковая, д. 1, строение 1, оф. 228<br>
+          Режим работы: с 9:00 до 18:00, выходной: суббота, воскресенье
+        </li>
+      </ul>
+      <ul class="page-footer__contact-list page-footer__contact-list--mail">
+        <li>
+          <a href="mailto:mail1@mail.ru">mail1@mail.ru</a>
+        </li>
+        <li>
+          <a href="mailto:mail2@mail.ru">mail2@mail.ru</a>
+        </li>
+      </ul>
+    </div>
+    <!-- map and social links -->
+    <div class="page-footer__right-column">
+      <div class="page-footer__maps">
+        <a href="#" class="page-footer__map"></a>
+        <a href="#" class="page-footer__map"></a>
       </div>
-      <div class="page-footer__contact-list page-footer__contact-list--address">
-        <ul>
-          <li>
-            666666, г. Урюпинск, ул. Лесопарковая, д. 1, строение 1, оф. 228<br>
-            Режим работы: с 9:00 до 18:00, выходной: суббота, воскресенье
-          </li>
-          <li>
-            666666, г. Бобруйск, ул. Лесопарковая, д. 1, строение 1, оф. 228<br>
-            Режим работы: с 9:00 до 18:00, выходной: суббота, воскресенье
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__contact-list page-footer__contact-list--mail">
-        <ul>
-          <li>
-            <a href="mailto:mail1@mail.ru">mail1@mail.ru</a>
-          </li>
-          <li>
-            <a href="mailto:mail2@mail.ru">mail2@mail.ru</a>
-          </li>
-        </ul>
+      <div class="page-footer__social-links">
+        <p>Мы в социальных сетях:</p>
+        <a class="page-footer__social-link page-footer__social-link--vk" href="#">
+          <span class="visually-hidden">ВКонтакте</span>
+          <svg class="nav-main__menu-icon" width="16" height="10">
+            <use xlink:href="img/sprite.svg#vk"></use>
+          </svg>
+        </a>
+        <a class="page-footer__social-link page-footer__social-link--twitter" href="#">
+          <span class="visually-hidden">Twitter</span>
+          <svg class="nav-main__menu-icon" width="16" height="13">
+            <use xlink:href="img/sprite.svg#twitter"></use>
+          </svg>
+        </a>
+        <a class="page-footer__social-link page-footer__social-link--youtube" href="#">
+          <span class="visually-hidden">Youtube</span>
+          <svg class="nav-main__menu-icon" width="16" height="11">
+            <use xlink:href="img/sprite.svg#youtube"></use>
+          </svg>
+        </a>
       </div>
     </div>
   </div>
@@ -484,6 +549,8 @@
   <div class="modal-background"></div>
   <!--scripts -->
   <script src="js/script.min.js"></script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
 
 </body>
 </html>
