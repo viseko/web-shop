@@ -1,6 +1,7 @@
 
 .section {
-  padding: 11px 0;
+  padding: 11px 13px;
+  margin-bottom: 5px;
   background-color: $cl-white;
 
   &__title {
@@ -8,5 +9,33 @@
     font-size: 18px;
     text-transform: uppercase;
     margin-bottom: 11px;
+  }
+}
+
+@media (max-width: $br2) {
+  .section {
+    padding: 11px 79px;
+  }
+}
+
+@media (max-width: $br3) {
+  .section {
+    padding: 11px 50px;
+  }
+}
+
+@media (max-width: $br4) {
+  .section {
+    padding: 20px 13px;
+  }
+
+  .section__title {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: $br5) {
+  .section__title {
+    margin-left: 46px;
   }
 }

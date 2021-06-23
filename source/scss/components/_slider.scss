@@ -1,0 +1,66 @@
+.slider {
+
+  // .slider__container
+  &__container {
+    overflow: hidden;
+  }
+
+  // .slider__slide
+  &__slide {
+    // Пока не требуется
+  }
+
+  // .slider__pagination
+  &__pagination {
+    display: flex;
+  }
+
+  // .slider__bullet
+  &__bullet {
+    display: block;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    margin-right: 6px;
+    border: 2px solid #fff;
+    background: none;
+    transform: translate(-50%);
+    background-color: #c4c4c4;
+    border-radius: 50%;
+    transition: 0.2s background-color, border-color;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  // .slider__bullet--active
+  &__bullet--active {
+    background-color: #58585b;
+    border-color: #58585b;
+  }
+
+  // .slider__controls
+  &__controls {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: $cl-red;
+
+    &:hover {
+      color: lighten($cl-red, 10%);
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+}

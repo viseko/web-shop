@@ -25,3 +25,29 @@
   }
 }
 
+.btn-square {
+  padding: 7px 20px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  border: 0;
+  background: none;
+  background-color: $cl-red;
+
+  &:hover {
+    background-color: #58585b;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: $br5) {
+  .btn-square {
+    padding: 15px 20px;
+    font-size: 105%;
+    letter-spacing: 4px;
+  }
+}

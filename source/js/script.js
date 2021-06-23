@@ -1,8 +1,8 @@
 (function () {
   // Helpers:
-  @@include("_ie-fix.js");
-  @@include("_adaptive-move.js");
-  @@include("_menu-btn.js");
+  // @@include("_ie-fix.js");
+  // @@include("_adaptive-move.js");
+  // @@include("_menu-btn.js");
 
   // Navigation mobile menu
   const menuBtn = setMenuButton({

@@ -1,3 +1,4 @@
+//
 function setMenuButton(options) {
   const btnClass = options.btn;
   const stateBodyClass = options.stateBodyClass;
