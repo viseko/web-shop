@@ -1,6 +1,6 @@
 (function () {
   // Helpers:
-  // addEventListener for MediaQueryList
+  // // addEventListener for MediaQueryList
 if (!window.matchMedia("screen").addEventListener) {
   window.matchMedia("screen").__proto__.addEventListener = (function() {
     const f = arguments[1];
@@ -8,7 +8,7 @@ if (!window.matchMedia("screen").addEventListener) {
   });
 }
 ;
-  // ========== Adaptive move ===========
+  // // ========== Adaptive move ===========
 // How to use:
 // 1. Add "data-am" attribute to HTML-element you need.
 // 2. Attribute value should be fit the pattern:
@@ -68,7 +68,8 @@ for (query in queries) {
   mediaQuery.addEventListener("change", matchMedia);
 }
 ;
-  function setMenuButton(options) {
+  // //
+function setMenuButton(options) {
   const btnClass = options.btn;
   const stateBodyClass = options.stateBodyClass;
   const mediaWhenMenuClose = options.mediaWhenMenuClose;
