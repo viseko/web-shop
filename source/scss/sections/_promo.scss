@@ -47,7 +47,6 @@
 
   // .promo__short-text
   &__short-text {
-    max-width: 184px;
     flex-grow: 1;
     color: $cl-red;
     font-weight: bold;
@@ -90,11 +89,6 @@
     margin: 0 5px;
     font-weight: normal;
     font-size: 28px;
-  }
-
-  // .promo__btn-buy
-  &__btn-buy {
-    // пока не требуется
   }
 }
 
@@ -162,7 +156,6 @@
     flex-direction: column;
     min-height: 125px;
     padding-left: 34px + 115px + 50px;
-    padding-top: 17px;
   }
 
   .promo__product-title {
@@ -190,18 +183,7 @@
   }
 
   .promo__controls {
-    display: block;
-    position: absolute;
-    top: 125 / 2 * 1px;
-    transform: translateY(-50%);
-
-    &--prev {
-      left: -5px;
-    }
-
-    &--next {
-      right: -5px;
-    }
+    display: none;
   }
 }
 
@@ -225,9 +207,5 @@
 
   .promo__btn-buy {
     width: 100%;
-  }
-
-  .promo__controls {
-    display: none;
   }
 }
