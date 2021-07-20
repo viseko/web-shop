@@ -1,14 +1,54 @@
 
 .section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 11px 13px;
   margin-bottom: 5px;
   background-color: $cl-white;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-width: 195px;
+    margin-bottom: 11px;
+  }
 
   &__title {
     color: $cl-red;
     font-size: 18px;
     text-transform: uppercase;
-    margin-bottom: 11px;
+  }
+
+  &__rss {
+    display: block;
+    margin-left: 25px;
+    color: $cl-red;
+
+    &:hover {
+      color: lighten($cl-red, 20%);
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  &__content p {
+    margin: 0;
+    margin-bottom: 13px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 20px;
   }
 }
 
@@ -31,6 +71,12 @@
 
   .section__title {
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .section__btn {
+    width: 100%;
   }
 }
 
