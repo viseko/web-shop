@@ -2,16 +2,15 @@
 
   // .video-gallery__item
   &__item {
+    // Пока не требуется
   }
 
   // .video-gallery__image
-
   &__image {
     height: 107px;
   }
 
   // .video-gallery__image-link
-
   &__image-link {
     display: flex;
     align-items: center;
@@ -31,12 +30,30 @@
 
   // .video-gallery__icon
   &__icon {
+    width: 49px;
+    height: 34px;
+  }
+
+  &__description {
+    max-height: 2.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
-.nav-main {
 
-  // .nav-main__menu-icon
+@media (max-width: 450px) {
+  .video-gallery__item {
+    width: 100%;
+    max-width: 320px;
 
-  &__menu-icon {
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      display: none;
+    }
+  }
+
+  .video-gallery__image {
+    height: 180px;
   }
 }
