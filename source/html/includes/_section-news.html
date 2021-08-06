@@ -1,10 +1,58 @@
-<section class="section news-main">
-  <header class="section__header">
-    <h2 class="section__title">Новости</h2>
-    <a href="" class="section__rss">
-      <svg class="nav-main__menu-icon" width="14" height="16">
-        <use xlink:href="img/sprite.svg#rss"></use>
-      </svg>
-    </a>
+<section class="section news-main" data-am=".sidebar / (min-width: 876px)">
+  <header class="grid section__header news-main__header">
+    <div class="news-main__title">
+      <h2 class="section__title">Новости</h2>
+      <a href="#" class="section__rss">
+        <svg class="nav-main__menu-icon" width="14" height="16">
+          <use xlink:href="img/sprite.svg#rss"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="quick-form news-main__subscribe">
+      <form action="https://echo.htmlacademy.ru" method="GET">
+        <input type="text" name="news-subscribe" id="news-subscribe" placeholder="Получать на email" required>
+        <button type="submit">
+          <svg width="17" height="17">
+            <use xlink:href="img/sprite.svg#power"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
   </header>
+  <div class="grid news-main__list">
+    <article class="grid__item news-main__item">
+      <figure class="grid__image news-main__image">
+        <!-- Здесь будет картинка -->
+      </figure>
+      <div class="grid__content news-main__content">
+        <time class="news-main__date" datetime="2021-02-12">12.02.2021</time>
+        <a href="#">Замечательная новость с замечательным длинным заголовком...</a>
+      </div>
+    </article>
+
+    <article class="grid__item news-main__item">
+      <figure class="grid__image news-main__image">
+        <!-- Здесь будет картинка -->
+      </figure>
+      <div class="grid__content news-main__content">
+        <time class="news-main__date" datetime="2021-02-12">12.02.2021</time>
+        <a href="#">Замечательная новость с замечательным длинным заголовком...</a>
+      </div>
+    </article>
+
+    <article class="grid__item news-main__item">
+      <figure class="grid__image news-main__image">
+        <!-- Здесь будет картинка -->
+      </figure>
+      <div class="grid__content news-main__content">
+        <time class="news-main__date" datetime="2021-02-12">12.02.2021</time>
+        <a href="#">Замечательная новость с замечательным длинным заголовком...</a>
+      </div>
+    </article>
+  </div>
+  <footer class="grid section__footer news-main__footer">
+    <a href="#" class="btn-square grid__item section__btn news-main__btn">
+      Смотреть еще
+    </a>
+  </footer>
 </section>

@@ -4,6 +4,9 @@
   // @@include("_adaptive-move.js");
   // @@include("_menu-btn.js");
 
+  // Disabling empty links
+  document.querySelectorAll('[href="#"]').forEach(link => link.addEventListener("click", function(e) {e.preventDefault()}));
+
   // Navigation mobile menu
   const menuBtn = setMenuButton({
     btn: "js-menu-nav",
