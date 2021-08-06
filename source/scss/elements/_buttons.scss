@@ -1,7 +1,6 @@
 .btn-round {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  position: relative;
   width: 38px;
   height: 38px;
   padding: 0;
@@ -11,9 +10,11 @@
   border-radius: 50%;
   transition: 0.1s;
 
-  &--menu svg {
-    position: relative;
-    top: 2px;
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &:hover {
