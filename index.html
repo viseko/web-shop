@@ -84,7 +84,7 @@
         </button>
       </div>
       <!-- header-search -->
-      <div class="page-header__search search-form" data-am=".nav-catalog__list / (max-width: 400px)">
+      <div class="page-header__search quick-form" data-am=".nav-catalog__list / (max-width: 400px)">
         <form action="https://echo.htmlacademy.ru" method="GET">
           <input type="text" name="s-search" id="search" placeholder="Поиск по каталогу" required>
           <button type="submit">
@@ -719,14 +719,62 @@
 </section>
 
     <section class="section news-main" data-am=".sidebar / (min-width: 876px)">
-  <header class="section__header">
-    <h2 class="section__title">Новости</h2>
-    <a href="" class="section__rss">
-      <svg class="nav-main__menu-icon" width="14" height="16">
-        <use xlink:href="img/sprite.svg#rss"></use>
-      </svg>
-    </a>
+  <header class="grid section__header news-main__header">
+    <div class="news-main__title">
+      <h2 class="section__title">Новости</h2>
+      <a href="#" class="section__rss">
+        <svg class="nav-main__menu-icon" width="14" height="16">
+          <use xlink:href="img/sprite.svg#rss"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="quick-form news-main__subscribe">
+      <form action="https://echo.htmlacademy.ru" method="GET">
+        <input type="email" name="news-subscribe" id="news-subscribe" placeholder="Получать на email" required>
+        <button type="submit">
+          <svg width="17" height="17">
+            <use xlink:href="img/sprite.svg#power"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
   </header>
+  <div class="grid news-main__list">
+    <article class="grid__item news-main__item">
+      <figure class="grid__image news-main__image">
+        <!-- Здесь будет картинка -->
+      </figure>
+      <div class="grid__content news-main__content">
+        <time class="news-main__date" datetime="2021-02-12">12.02.2021</time>
+        <a href="#">Замечательная новость с замечательным длинным заголовком...</a>
+      </div>
+    </article>
+
+    <article class="grid__item news-main__item">
+      <figure class="grid__image news-main__image">
+        <!-- Здесь будет картинка -->
+      </figure>
+      <div class="grid__content news-main__content">
+        <time class="news-main__date" datetime="2021-02-12">12.02.2021</time>
+        <a href="#">Замечательная новость с замечательным длинным заголовком...</a>
+      </div>
+    </article>
+
+    <article class="grid__item news-main__item">
+      <figure class="grid__image news-main__image">
+        <!-- Здесь будет картинка -->
+      </figure>
+      <div class="grid__content news-main__content">
+        <time class="news-main__date" datetime="2021-02-12">12.02.2021</time>
+        <a href="#">Замечательная новость с замечательным длинным заголовком...</a>
+      </div>
+    </article>
+  </div>
+  <footer class="grid section__footer news-main__footer">
+    <a href="#" class="btn-square grid__item section__btn news-main__btn">
+      Смотреть еще
+    </a>
+  </footer>
 </section>
 
     <section class="section about">
@@ -797,7 +845,7 @@
           <a href="#">Название ссылки</a>
         </li>
       </ul>
-      <div class="page-footer__search search-form">
+      <div class="page-footer__search quick-form">
         <form action="https://echo.htmlacademy.ru" method="GET">
           <input type="text" name="s-search" id="search" placeholder="Поиск по каталогу" required>
           <button type="submit">

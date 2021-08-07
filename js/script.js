@@ -2,10 +2,10 @@
   // Helpers:
   // // addEventListener for MediaQueryList
 if (!window.matchMedia("screen").addEventListener) {
-  window.matchMedia("screen").__proto__.addEventListener = (function() {
+  window.matchMedia("screen").__proto__.addEventListener = function() {
     const f = arguments[1];
     this.addListener(f);
-  });
+  };
 }
 ;
   // // ========== Adaptive move ===========
@@ -108,6 +108,9 @@ function setMenuButton(options) {
   };
 }
 ;
+
+  // Disabling empty links
+  document.querySelectorAll('[href="#"]').forEach(link => link.addEventListener("click", function(e) {e.preventDefault()}));
 
   // Navigation mobile menu
   const menuBtn = setMenuButton({
