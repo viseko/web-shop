@@ -45,6 +45,24 @@
   }
 }
 
+.btn-menu {
+  &__icon-open {
+    display: block;
+  }
+
+  &__icon-close {
+    display: none;
+  }
+
+  &._open &__icon-open {
+    display: none;
+  }
+
+  &._open &__icon-close {
+    display: block;
+  }
+}
+
 @media (max-width: $br5) {
   .btn-square {
     padding: 15px 20px;

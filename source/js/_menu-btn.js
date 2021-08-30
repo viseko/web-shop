@@ -3,10 +3,11 @@ function setMenuButton(options) {
   const btnClass = options.btn;
   const stateBodyClass = options.stateBodyClass;
   const mediaWhenMenuClose = options.mediaWhenMenuClose;
+  const btn = document.querySelector(`.${btnClass}`)
 
   let menuOpen = false;
 
-  document.querySelector(`.${btnClass}`).addEventListener("click", function() {
+  btn.addEventListener("click", function() {
     if (!menuOpen) {
       openMenu();
     } else {
@@ -21,11 +22,13 @@ function setMenuButton(options) {
 
   function openMenu() {
     document.body.classList.add(stateBodyClass);
+    btn.classList.add("_open");
     menuOpen = true;
   }
 
   function closeMenu() {
     document.body.classList.remove(stateBodyClass);
+    btn.classList.remove("_open");
     menuOpen = false;
   }
 

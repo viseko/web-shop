@@ -39,10 +39,6 @@
     color: $cl-red;
   }
 
-  &__close-icon {
-    display: none;
-  }
-
   li {
     position: relative;
     flex-grow: 1;
@@ -76,14 +72,6 @@
       position: fixed;
       z-index: 101;
       right: 315px;
-    }
-
-    .nav-main__menu-icon {
-      display: none;
-    }
-
-    .nav-main__close-icon {
-      display: inline-block;
     }
   }
 
@@ -133,6 +121,22 @@
   .nav-main__link[href] {
     &:hover {
       background-color: #e2e3e4;
+    }
+  }
+}
+
+@media (max-width: $br5) {
+  .nav-main__wrapper {
+    width: 100%;
+    padding-left: 60px;
+  }
+
+  ._menu-show {
+    .nav-main__menu-btn {
+      position: fixed;
+      z-index: 101;
+      right: unset;
+      top: 22px;
     }
   }
 }
