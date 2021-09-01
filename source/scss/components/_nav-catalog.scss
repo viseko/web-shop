@@ -109,7 +109,6 @@
     transition: 0.2s height;
   }
 
-
   // .nav-catalog__sublist
   &__sublist {
     // Временно:
@@ -170,7 +169,7 @@
 
 @media (max-width: $br2) {
   .nav-catalog__list {
-    position: fixed;
+    position: absolute;
     top: 125px;
     right: 100%;
     z-index: 10;
@@ -180,6 +179,7 @@
     padding-bottom: 20px;
     overflow: auto;
     background-color: #f1f1f2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     transition: 0.5s transform;
 
     ._catalog-show & {
@@ -234,14 +234,33 @@
       display: none;
     }
   }
+
+  .nav-catalog__link {
+    padding: 15px 13px;
+  }
+
+  .nav-catalog__btn-expand {
+    width: 49px;
+    height: 49px;
+
+    .nav-catalog__category-item--open & {
+      height: 49px;
+    }
+  }
 }
 
 @media (max-width: $br5) {
   .nav-catalog__list {
+    right: unset;
+    left: 100%;
     display: flex;
     flex-direction: column;
     width: 100%;
     padding-top: 10px;
+  }
+
+  ._catalog-show .nav-catalog__list {
+    transform: translateX(-100%);
   }
 
   .nav-catalog__header {
