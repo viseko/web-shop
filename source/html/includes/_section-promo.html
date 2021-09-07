@@ -7,7 +7,18 @@
     <!-- slides -->
     <div class="slider__container">
       <div class="slider__slide promo__slide">
-        <figure class="promo__image"></figure>
+        <figure class="promo__image">
+          @@include("../includes/components/_picture.html", {
+            "path": "img/promo-slider/",
+            "filename": "slide1",
+            "format": "jpg",
+            "webp": "true",
+            "x2": "true",
+            "desktop": "true",
+            "tablet": "true",
+            "mobile": "true"
+          })
+        </figure>
         <div class="promo__description">
           <div class="promo__description-top">
             <h3 class="promo__product-title">X3-666RX</h3>
