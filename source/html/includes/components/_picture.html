@@ -1,4 +1,20 @@
 <picture>
-  <!-- <img src="@@path@@filename_desktop@x2.@@format" width="200" height="200"> -->
-  <img src="img/promo_slider/slide4_desktop@x2.jpg" alt="Слайд 1">
+  @@if (mobile !== false) {
+    @@if (webp === true) {
+      <source media="(max-width: @@mobile)" srcset="@@folder/@@filename_mobile@x1.webp@@if(x2 === true){, @@folder/@@filename_mobile@x2.webp 2x}" type="image/webp">
+    }
+    <source media="(max-width: @@mobile)" srcset="@@folder/@@filename_mobile@x1.@@ext@@if(x2 === true){, @@folder/@@filename_mobile@x2.@@ext 2x}">
+  }
+
+  @@if (tablet !== false) {
+    @@if (webp === true) {
+      <source media="(max-width: @@tablet)" srcset="@@folder/@@filename_tablet@x1.webp@@if(x2 === true){, @@folder/@@filename_tablet@x2.webp 2x}" type="image/webp">
+    }
+    <source media="(max-width: @@tablet)" srcset="@@folder/@@filename_tablet@x1.@@ext@@if(x2 === true){, @@folder/@@filename_tablet@x2.@@ext 2x}">
+  }
+
+  @@if (webp === true) {
+    <source srcset="@@folder/@@filename_desktop@x1.webp@@if(x2 === true){, @@folder/@@filename_desktop@x2.webp 2x}" type="image/webp">
+  }
+  <img src="@@folder/@@filename_desktop@x1.@@ext"@@if(x2 === true){ srcset="@@folder/@@filename_desktop@x2.@@ext 2x}" alt="@@alt">
 </picture>
