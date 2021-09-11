@@ -2,6 +2,9 @@
 <html class="no-js no-webp" lang="ru">
 <head>
   @@include("includes/_head.html")
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </head>
 <body>
   <!-- noscript notification -->
@@ -18,25 +21,34 @@
     @@include("includes/_page-header.html")
     <!-- sidebar -->
     @@include("includes/_sidebar.html")
-  <!-- main sections -->
-  <main class="page-main">
-    @@include("includes/_section-promo.html")
-    @@include("includes/_section-video.html")
-    @@include("includes/_section-catalog.html")
-    @@include("includes/_section-news.html")
-    @@include("includes/_section-about.html")
-  </main>
+    <!-- main sections -->
+    <main class="page-main">
+      @@include("includes/_section-promo.html")
+      @@include("includes/_section-video.html")
+      @@include("includes/_section-catalog.html")
+      @@include("includes/_section-news.html")
+      @@include("includes/_section-about.html")
+    </main>
 
-  <!-- page-footer -->
-  @@include("includes/_page-footer.html")
+    <!-- page-footer -->
+    @@include("includes/_page-footer.html")
   </div>
 
   <!-- modal -->
   <div class="modal-background"></div>
+
   <!--scripts -->
   <script src="js/script.min.js"></script>
-  <script src="js/svg4everybody.min.js"></script>
-  <script>svg4everybody();</script>
 
+  <!-- svg4everybody -->
+  <script>
+    const script = document.createElement("SCRIPT");
+    script.src = "js/svg4everybody.min.js";
+    script.onload = function() {
+      svg4everybody();
+    };
+
+    document.body.append(script);
+  </script>
 </body>
 </html>

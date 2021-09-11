@@ -2,13 +2,19 @@
 
   // .promo__slider
   &__slider {
-    position: relative;
-    padding-bottom: 50px;
+    // position: relative;
+    width: 100%;
+  }
+
+  &__slider.swiper {
+    overflow: unset;
   }
 
   // .promo__slide
   &__slide {
     display: flex;
+    background-color: #fff;
+    padding-bottom: 50px;
   }
 
   // .promo__image

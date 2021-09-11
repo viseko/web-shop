@@ -38,4 +38,7 @@
       this.parentElement.classList.toggle(openClass);
     });
   }
+
+  // Sliders
+  // @@include("_promo-slider.js");
 })();

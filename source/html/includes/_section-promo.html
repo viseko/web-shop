@@ -3,10 +3,10 @@
     <h2 class="section__title">Новинки</h2>
   </header>
   <!-- promo-slider -->
-  <div class="promo__slider slider">
+  <div class="swiper slider promo__slider js-promo-slider">
     <!-- slides -->
-    <div class="slider__container">
-      <div class="slider__slide promo__slide">
+    <div class="swiper-wrapper slider__container">
+      <div class="swiper-slide slider__slide promo__slide">
         <figure class="promo__image">
           @@include("../includes/components/_picture.html", {
             "folder": "img/promo_slider",
@@ -43,22 +43,160 @@
           </div>
         </div>
       </div>
+      <div class="swiper-slide slider__slide promo__slide">
+        <figure class="promo__image">
+          @@include("../includes/components/_picture.html", {
+            "folder": "img/promo_slider",
+            "filename": "slide2",
+            "ext": "jpg",
+            "webp": true,
+            "x2": true,
+            "tablet": "875px",
+            "mobile": "560px",
+            "alt": "Слайд 1"
+          })
+        </figure>
+        <div class="promo__description">
+          <div class="promo__description-top">
+            <h3 class="promo__product-title">MA-228Z</h3>
+            <div class="promo__short-text">
+              Встроенный огнемёт<br>
+              и система ПВО
+            </div>
+          </div>
+          <div class="promo__main-text">
+            Учитывая ключевые сценарии поведения, высокое качество позиционных исследований прекрасно подходит для реализации как самодостаточных, так и внешне зависимых концептуальных решений.
+          </div>
+          <div class="promo__buy">
+            <p class="promo__cost">
+              от
+              <b>162 999</b>
+              руб
+            </p>
+            <a href="#" class="btn-square promo__btn-buy">
+              Подробнее
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide slider__slide promo__slide">
+        <figure class="promo__image">
+          @@include("../includes/components/_picture.html", {
+            "folder": "img/promo_slider",
+            "filename": "slide3",
+            "ext": "jpg",
+            "webp": true,
+            "x2": true,
+            "tablet": "875px",
+            "mobile": "560px",
+            "alt": "Слайд 2"
+          })
+        </figure>
+        <div class="promo__description">
+          <div class="promo__description-top">
+            <h3 class="promo__product-title">DM103F</h3>
+            <div class="promo__short-text">
+              Пропускает,<br>
+              но не отпускает
+            </div>
+          </div>
+          <div class="promo__main-text">
+            Учитывая ключевые сценарии поведения, высокое качество позиционных исследований прекрасно подходит для реализации как самодостаточных, так и внешне зависимых концептуальных решений. Предварительные выводы неутешительны: убеждённость некоторых оппонентов однозначно фиксирует необходимость прогресса профессионального сообщества.
+          </div>
+          <div class="promo__buy">
+            <p class="promo__cost">
+              от
+              <b>15 220</b>
+              руб
+            </p>
+            <a href="#" class="btn-square promo__btn-buy">
+              Подробнее
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide slider__slide promo__slide">
+        <figure class="promo__image">
+          @@include("../includes/components/_picture.html", {
+            "folder": "img/promo_slider",
+            "filename": "slide4",
+            "ext": "jpg",
+            "webp": true,
+            "x2": true,
+            "tablet": "875px",
+            "mobile": "560px",
+            "alt": "Слайд 0"
+          })
+        </figure>
+        <div class="promo__description">
+          <div class="promo__description-top">
+            <h3 class="promo__product-title">Firebird-2K</h3>
+            <div class="promo__short-text">
+              Сверхзвуковая скорость<br>
+              и режим "стелс"
+            </div>
+          </div>
+          <div class="promo__main-text">
+            Учитывая ключевые сценарии поведения, высокое качество позиционных исследований прекрасно подходит для реализации как самодостаточных, так и внешне зависимых концептуальных решений. Предварительные выводы неутешительны: убеждённость некоторых оппонентов однозначно фиксирует необходимость прогресса профессионального сообщества.
+          </div>
+          <div class="promo__buy">
+            <p class="promo__cost">
+              от
+              <b>50 113</b>
+              руб
+            </p>
+            <a href="#" class="btn-square promo__btn-buy">
+              Подробнее
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide slider__slide promo__slide">
+        <figure class="promo__image">
+          @@include("../includes/components/_picture.html", {
+            "folder": "img/promo_slider",
+            "filename": "slide5",
+            "ext": "jpg",
+            "webp": true,
+            "x2": true,
+            "tablet": "875px",
+            "mobile": "560px",
+            "alt": "Слайд 0"
+          })
+        </figure>
+        <div class="promo__description">
+          <div class="promo__description-top">
+            <h3 class="promo__product-title">XYZ-123</h3>
+            <div class="promo__short-text">
+              Стильный магнит<br>
+              на холодильник
+            </div>
+          </div>
+          <div class="promo__main-text">
+            Учитывая ключевые сценарии поведения, высокое качество позиционных исследований прекрасно подходит для реализации как самодостаточных, так и внешне зависимых концептуальных решений. Предварительные выводы неутешительны: убеждённость некоторых оппонентов однозначно фиксирует необходимость прогресса профессионального сообщества.
+          </div>
+          <div class="promo__buy">
+            <p class="promo__cost">
+              от
+              <b>999</b>
+              руб
+            </p>
+            <a href="#" class="btn-square promo__btn-buy">
+              Подробнее
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- pagination -->
-    <div class="slider__pagination promo__pagination">
-      <button class="slider__bullet"></button>
-      <button class="slider__bullet slider__bullet--active"></button>
-      <button class="slider__bullet"></button>
-      <button class="slider__bullet"></button>
-      <button class="slider__bullet"></button>
-    </div>
+    <div class="slider__pagination promo__pagination"></div>
     <!-- controls -->
-    <button class="slider__controls promo__controls promo__controls--prev">
+    <button class="slider__controls promo__controls promo__controls--prev js-promo-prev">
       <svg class="nav-main__menu-icon" width="30" height="30">
         <use xlink:href="img/sprite.svg#arrow-left"></use>
       </svg>
     </button>
-    <button class="slider__controls promo__controls promo__controls--next">
+    <button class="slider__controls promo__controls promo__controls--next js-promo-next">
       <svg class="nav-main__menu-icon" width="30" height="30">
         <use xlink:href="img/sprite.svg#arrow-right"></use>
       </svg>
