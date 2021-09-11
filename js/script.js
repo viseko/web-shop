@@ -73,10 +73,11 @@ function setMenuButton(options) {
   const btnClass = options.btn;
   const stateBodyClass = options.stateBodyClass;
   const mediaWhenMenuClose = options.mediaWhenMenuClose;
+  const btn = document.querySelector(`.${btnClass}`)
 
   let menuOpen = false;
 
-  document.querySelector(`.${btnClass}`).addEventListener("click", function() {
+  btn.addEventListener("click", function() {
     if (!menuOpen) {
       openMenu();
     } else {
@@ -91,11 +92,13 @@ function setMenuButton(options) {
 
   function openMenu() {
     document.body.classList.add(stateBodyClass);
+    btn.classList.add("_open");
     menuOpen = true;
   }
 
   function closeMenu() {
     document.body.classList.remove(stateBodyClass);
+    btn.classList.remove("_open");
     menuOpen = false;
   }
 
@@ -143,4 +146,35 @@ function setMenuButton(options) {
       this.parentElement.classList.toggle(openClass);
     });
   }
+
+  // Sliders
+  // // Promo slider
+const promoSlider = new Swiper('.swiper', {
+  autoplay: {
+    delay: 5000
+  },
+  speed: 500,
+  effect: "fade",
+  freeMode: false,
+  loop: true,
+  autoHeight: true,
+
+
+  pagination: {
+    el: ".promo__pagination",
+    bulletClass: "slider__bullet",
+    bulletActiveClass: "slider__bullet--active",
+    clickable: true,
+    clickableClass: "slider__pagination--clickable",
+    currentClass: "slider__pagination--current",
+    horizontalClass: "slider__pagination--horizontal",
+    modifierClass: "slider__pagination--"
+  },
+
+  navigation: {
+    prevEl: ".js-promo-prev",
+    nextEl: ".js-promo-next"
+  }
+});
+;
 })();
