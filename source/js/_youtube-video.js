@@ -12,6 +12,7 @@ class YouTubeVideo {
   }
 
   play() {
+    const elem = this.elem;
     const container = this.elem.querySelector("figure");
 
     const iframe = document.createElement("IFRAME");
@@ -19,12 +20,15 @@ class YouTubeVideo {
     iframe.setAttribute("allowfullscreen", true);
     iframe.src = `https://www.youtube.com/embed/${this.id}?frameborder=0&showinfo=0`;
 
+    elem.classList.add("_loading");
+
     container.append(iframe);
-    this.elem.classList.add("_play");
+    iframe.onload = function() {
+      elem.classList.remove("_loading");
+      elem.classList.add("_play");
+    }
   }
 }
-
-
 
 const youtubeVideos = Array.from(document.querySelectorAll("[data-youtube-id]"))
   .map(elem => new YouTubeVideo(elem, elem.dataset.youtubeId));
