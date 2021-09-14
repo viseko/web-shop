@@ -4,6 +4,12 @@
   // @@include("_adaptive-move.js");
   // @@include("_menu-btn.js");
 
+  // Sliders
+  // @@include("_promo-slider.js");
+
+  // Youtube Videos
+  // @@include("_youtube-video.js");
+
   // Disabling empty links
   document.querySelectorAll('[href="#"]').forEach(link => link.addEventListener("click", function(e) {e.preventDefault()}));
 
@@ -38,7 +44,4 @@
       this.parentElement.classList.toggle(openClass);
     });
   }
-
-  // Sliders
-  // @@include("_promo-slider.js");
 })();

@@ -1,14 +1,15 @@
 // Promo slider
-const promoSlider = new Swiper('.swiper', {
+const promoSlider = new Swiper('.js-promo-slider', {
   autoplay: {
-    delay: 5000
+    delay: 5000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true
   },
   speed: 500,
   effect: "fade",
   freeMode: false,
   loop: true,
   autoHeight: true,
-
 
   pagination: {
     el: ".promo__pagination",
