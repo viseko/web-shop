@@ -2,7 +2,13 @@
   // .index-catalog__image
   &__image {
     height: 95px;
-    background-color: #c4c4c4;
+    background-color: #fff;
+  }
+
+  &__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   // .index-catalog__title
