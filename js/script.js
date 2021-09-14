@@ -112,6 +112,75 @@ function setMenuButton(options) {
 }
 ;
 
+  // Sliders
+  // // Promo slider
+const promoSlider = new Swiper('.js-promo-slider', {
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true
+  },
+  speed: 500,
+  effect: "fade",
+  freeMode: false,
+  loop: true,
+  autoHeight: true,
+
+  pagination: {
+    el: ".promo__pagination",
+    bulletClass: "slider__bullet",
+    bulletActiveClass: "slider__bullet--active",
+    clickable: true,
+    clickableClass: "slider__pagination--clickable",
+    currentClass: "slider__pagination--current",
+    horizontalClass: "slider__pagination--horizontal",
+    modifierClass: "slider__pagination--"
+  },
+
+  navigation: {
+    prevEl: ".js-promo-prev",
+    nextEl: ".js-promo-next"
+  }
+});
+;
+
+  // Youtube Videos
+  // //
+class YouTubeVideo {
+  constructor(elem, id) {
+    this.elem = elem;
+    this.id = id;
+
+    const link = elem.querySelector(".js-youtube-btn");
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      this.play();
+    })
+  }
+
+  play() {
+    const elem = this.elem;
+    const container = this.elem.querySelector("figure");
+
+    const iframe = document.createElement("IFRAME");
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.setAttribute("allowfullscreen", true);
+    iframe.src = `https://www.youtube.com/embed/${this.id}?frameborder=0&showinfo=0`;
+
+    elem.classList.add("_loading");
+
+    container.append(iframe);
+    iframe.onload = function() {
+      elem.classList.remove("_loading");
+      elem.classList.add("_play");
+    }
+  }
+}
+
+const youtubeVideos = Array.from(document.querySelectorAll("[data-youtube-id]"))
+  .map(elem => new YouTubeVideo(elem, elem.dataset.youtubeId));
+;
+
   // Disabling empty links
   document.querySelectorAll('[href="#"]').forEach(link => link.addEventListener("click", function(e) {e.preventDefault()}));
 
@@ -138,7 +207,6 @@ function setMenuButton(options) {
       const openClass = "nav-catalog__category-item--open";
       const alreadyOpened = document.querySelector(`.${openClass}`);
 
-
       if (alreadyOpened && alreadyOpened != this.parentElement) {
         alreadyOpened.classList.remove(openClass);
       }
@@ -146,35 +214,4 @@ function setMenuButton(options) {
       this.parentElement.classList.toggle(openClass);
     });
   }
-
-  // Sliders
-  // // Promo slider
-const promoSlider = new Swiper('.swiper', {
-  autoplay: {
-    delay: 5000
-  },
-  speed: 500,
-  effect: "fade",
-  freeMode: false,
-  loop: true,
-  autoHeight: true,
-
-
-  pagination: {
-    el: ".promo__pagination",
-    bulletClass: "slider__bullet",
-    bulletActiveClass: "slider__bullet--active",
-    clickable: true,
-    clickableClass: "slider__pagination--clickable",
-    currentClass: "slider__pagination--current",
-    horizontalClass: "slider__pagination--horizontal",
-    modifierClass: "slider__pagination--"
-  },
-
-  navigation: {
-    prevEl: ".js-promo-prev",
-    nextEl: ".js-promo-next"
-  }
-});
-;
 })();
