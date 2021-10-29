@@ -6,6 +6,7 @@
 
   // Sliders
   // @@include("_promo-slider.js");
+  // @@include("_category-slider.js");
 
   // Youtube Videos
   // @@include("_youtube-video.js");
