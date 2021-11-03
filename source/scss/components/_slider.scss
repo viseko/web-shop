@@ -9,17 +9,6 @@
 }
 
 .slider {
-
-  // .slider__container
-  &__container {
-    overflow: hidden;
-  }
-
-  // .slider__slide
-  &__slide {
-    // Пока не требуется
-  }
-
   // .slider__pagination
   &__pagination {
     display: flex;
@@ -66,13 +55,19 @@
     border: 0;
     background: none;
     color: $cl-red;
+    z-index: 1;
 
-    &:hover {
+    &:hover:not(:disabled) {
       color: lighten($cl-red, 10%);
     }
 
-    &:active {
+    &:active:not(:disabled) {
       opacity: 0.7;
+    }
+
+    &:disabled {
+      color: #989899;
+      opacity: 0.3;
     }
   }
 }

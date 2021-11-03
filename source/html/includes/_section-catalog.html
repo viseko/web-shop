@@ -2,9 +2,9 @@
   <header class="section__header">
     <h2 class="section__title">У нас покупают</h2>
   </header>
-  <div class="slider index-catalog__slider">
-    <div class="grid slider__container index-catalog__slides">
-      <section class="grid__item index-catalog__category">
+  <div class="swiper slider index-catalog__slider js-catalog-slider">
+    <div class="swiper-wrapper grid slider__container index-catalog__slides">
+      <section class="swiper-slide grid__item index-catalog__category">
         <figure class="grid__image index-catalog__image">
           @@include("../includes/components/_picture.html", {
             "folder": "img/categories",
@@ -29,7 +29,7 @@
           </div>
         </div>
       </section>
-      <section class="grid__item index-catalog__category">
+      <section class="swiper-slide grid__item index-catalog__category">
         <figure class="grid__image index-catalog__image">
           @@include("../includes/components/_picture.html", {
             "folder": "img/categories",
@@ -52,7 +52,7 @@
           </div>
         </div>
       </section>
-      <section class="grid__item index-catalog__category">
+      <section class="swiper-slide grid__item index-catalog__category">
         <figure class="grid__image index-catalog__image">
           @@include("../includes/components/_picture.html", {
             "folder": "img/categories",
@@ -74,7 +74,7 @@
           </div>
         </div>
       </section>
-      <section class="grid__item index-catalog__category">
+      <section class="swiper-slide grid__item index-catalog__category">
         <figure class="grid__image index-catalog__image">
           @@include("../includes/components/_picture.html", {
             "folder": "img/categories",
@@ -96,7 +96,7 @@
           </div>
         </div>
       </section>
-      <section class="grid__item index-catalog__category">
+      <section class="swiper-slide grid__item index-catalog__category">
         <figure class="grid__image index-catalog__image">
           @@include("../includes/components/_picture.html", {
             "folder": "img/categories",
@@ -118,7 +118,7 @@
           </div>
         </div>
       </section>
-      <section class="grid__item index-catalog__category">
+      <section class="swiper-slide grid__item index-catalog__category">
         <figure class="grid__image index-catalog__image">
           @@include("../includes/components/_picture.html", {
             "folder": "img/categories",
@@ -141,7 +141,7 @@
           </div>
         </div>
       </section>
-      <section class="grid__item index-catalog__category">
+      <section class="swiper-slide grid__item index-catalog__category">
         <figure class="grid__image index-catalog__image">
           @@include("../includes/components/_picture.html", {
             "folder": "img/categories",
@@ -162,7 +162,7 @@
           </div>
         </div>
       </section>
-      <section class="grid__item index-catalog__category">
+      <section class="swiper-slide grid__item index-catalog__category">
         <figure class="grid__image index-catalog__image">
           @@include("../includes/components/_picture.html", {
             "folder": "img/categories",
@@ -185,7 +185,7 @@
           </div>
         </div>
       </section>
-      <section class="grid__item index-catalog__category">
+      <section class="swiper-slide grid__item index-catalog__category">
         <figure class="grid__image index-catalog__image">
           @@include("../includes/components/_picture.html", {
             "folder": "img/categories",
@@ -209,24 +209,14 @@
       </section>
     </div>
     <!-- pagination -->
-    <div class="slider__pagination index-catalog__pagination">
-      <button class="slider__bullet slider__bullet--active"></button>
-      <button class="slider__bullet"></button>
-      <button class="slider__bullet"></button>
-      <button class="slider__bullet"></button>
-      <button class="slider__bullet"></button>
-      <button class="slider__bullet"></button>
-      <button class="slider__bullet"></button>
-      <button class="slider__bullet"></button>
-      <button class="slider__bullet"></button>
-    </div>
+    <div class="slider__pagination index-catalog__pagination"></div>
     <!-- controls -->
-    <button class="slider__controls index-catalog__controls index-catalog__controls--prev">
+    <button class="slider__controls index-catalog__controls index-catalog__controls--prev  js-catalog-prev">
       <svg class="nav-main__menu-icon" width="30" height="30">
         <use xlink:href="img/sprite.svg#arrow-left"></use>
       </svg>
     </button>
-    <button class="slider__controls index-catalog__controls index-catalog__controls--next">
+    <button class="slider__controls index-catalog__controls index-catalog__controls--next js-catalog-next">
       <svg class="nav-main__menu-icon" width="30" height="30">
         <use xlink:href="img/sprite.svg#arrow-right"></use>
       </svg>
