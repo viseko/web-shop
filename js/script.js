@@ -144,28 +144,20 @@ const promoSlider = new Swiper('.js-promo-slider', {
 });
 ;
   // //
-
 const categorySliderBreakpoint = window.matchMedia("(max-width: 450px)");
 
 let categorySlider = null;
 
-categorySliderBreakpoint.addEventListener("change", function() {
-  if (this.matches) {
-    console.log("init");
-  } else {
-    console.log("destroy");
-  }
-});
+categorySliderBreakpoint.addEventListener("change", checkCategorySliderBreakpoints);
 
+checkCategorySliderBreakpoints();
 
 function initCategorySlider() {
-  const categorySlider = new Swiper('.js-promo-slider', {
+  categorySlider = new Swiper(".js-catalog-slider", {
     speed: 500,
-    loop: true,
-    autoHeight: true,
 
     pagination: {
-      el: ".promo__pagination",
+      el: ".index-catalog__pagination",
       bulletClass: "slider__bullet",
       bulletActiveClass: "slider__bullet--active",
       clickable: true,
@@ -176,13 +168,19 @@ function initCategorySlider() {
     },
 
     navigation: {
-      prevEl: ".js-promo-prev",
-      nextEl: ".js-promo-next"
+      prevEl: ".js-catalog-prev",
+      nextEl: ".js-catalog-next"
     }
   });
 }
 
-
+function checkCategorySliderBreakpoints() {
+  if (categorySliderBreakpoint.matches) {
+    initCategorySlider()
+  } else if (!categorySliderBreakpoint.matches && categorySlider) {
+    categorySlider.destroy();
+  }
+}
 ;
 
   // Youtube Videos
