@@ -7,6 +7,9 @@ const promoSlider = new Swiper('.js-promo-slider', {
   },
   speed: 500,
   effect: "fade",
+  fadeEffect: {
+    crossFade: true
+  },
   freeMode: false,
   loop: true,
   autoHeight: true,
